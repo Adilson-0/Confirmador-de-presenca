@@ -4,7 +4,7 @@
     --font-principal: "Montserrat"
 }
 
-.cabecalho{
+header{
     background-color: #1E8F31;
     padding: 0.5em;
 }
@@ -12,9 +12,19 @@
 h1, h2 {
     font-family: var(--font-principal);
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     font-size: 30px;
+}
+
+h3 {
+    font-family: var(--font-principal);
+    text-align: center;
+    margin: 1em 0;
+    font-size: 25px;
+}
+
+main {
+    padding-top: 2em;
 }
 
 .dados {
@@ -23,10 +33,13 @@ h1, h2 {
     display: block;
     margin: auto;
     margin-bottom: 1em;
+    margin-top: 1em;
     padding: 0.5em 0 0.5em 0;
     border-radius: 20px;
     height: 2em;
-    width: 15em;
+    width: 18em;
+    border: 3px solid #19521D;
+
 }
 
 .submit {
@@ -36,14 +49,49 @@ h1, h2 {
     text-align: center;
     display: block;
     margin: auto;
-    margin-bottom: 1em;
+    margin-bottom: 4em;
     padding: 0.5em 0 0.5em 0;
     width: 10em;
     border-radius: 20px;
 }
 
-.rodape{
+footer{
     background-color: #1E8F31;
-    padding: 0.5em;
+    padding-top: 0.5em;
+
 }
 
+.imagens{
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+}
+
+.logos {
+    margin: 0 2em;
+}
+
+hr {
+    margin: 2em 0;
+}
+
+#ifpb {
+    width: 10em;
+    height: 15em;
+}
+
+.devs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    margin-bottom: 1em;
+    font-family: var(--font-principal);
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+a:hover {
+    color: white;
+}
