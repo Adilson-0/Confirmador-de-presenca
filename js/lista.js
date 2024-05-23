@@ -1,1 +1,1 @@
-//gerador de lista automático
+//função geradora da lista de presença
