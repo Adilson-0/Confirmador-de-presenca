@@ -5,7 +5,7 @@ const {GMAIL_PASS} = require("./pass.json")
 const dateObj = new Date();
 var data = dateObj.getDate()+"/"+((dateObj.getMonth())+1)+"/"+dateObj.getFullYear();
 
-const mailer = nodemailer.createTransport({
+const transport = nodemailer.createTransport({
     host:'smtp.gmail.com',
     port:465,
     secure:true,
@@ -16,13 +16,14 @@ const mailer = nodemailer.createTransport({
 });
 
 var envEmail = async function (listText, listHtml){
-    const email = await mailer.sendMail({
+    const info = await transport.sendMail({
         from:"BotList <botlist739@gmail.com>",
         to:"adilsonfernandes588@gmail.com",
         subject:"Lista de presença ("+data+")",
         text:listText,
         html:listHtml
     });
+    console.log(info.messageId);
 };
 
 module.exports = envEmail;
