@@ -1,5 +1,9 @@
+//função responsável por enviar o e-mail com a lista de presença
+
 const nodemailer = require('nodemailer');
 const {GMAIL_PASS} = require("./pass.json")
+const dateObj = new Date();
+var data = dateObj.getDate()+"/"+((dateObj.getMonth())+1)+"/"+dateObj.getFullYear();
 
 const mailer = nodemailer.createTransport({
     host:'smtp.gmail.com',
@@ -11,13 +15,13 @@ const mailer = nodemailer.createTransport({
     }
 });
 
-var envEmail = async function (){
+var envEmail = async function (listText, listHtml){
     const email = await mailer.sendMail({
         from:"BotList <botlist739@gmail.com>",
-        to:"jhonnatavieiravirginio@gmail.com",
+        to:"adilsonfernandes588@gmail.com",
         subject:"Lista de presença ("+data+")",
-        text:"",
-        html:""
+        text:listText,
+        html:listHtml
     });
 };
 
