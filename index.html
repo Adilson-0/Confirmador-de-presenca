@@ -19,43 +19,52 @@
                 <h2>Confime sua Presença</h2>
                 <form method="get">
 
-                    <label for="nome"></label>
-                    <input type="text" placeholder="Nome" id="nome" class="dados">
+                    <input type="text" placeholder="Nome" id="nome" class="dados" required>
 
-                    <label for="matricula"></label>
-                    <input type="text" placeholder="Matrícula" id="matricula" class="dados">
+                    <input type="text" placeholder="Matrícula" id="matricula" class="dados" maxlength="12" required>
 
-                    <label for="email"></label>
-                    <input type="text" placeholder="Email" id="email" class="dados">
+                    <select name="Serie" id="serie" class="dados" required>
+                        <option hidden>Série</option>
+                        <option>1º A</option>
+                        <option>2º A</option>
+                        <option>3º A</option>
+                        <option>1º B</option>
+                        <option>2º B</option>
+                        <option>3º B</option>
+                    </select>
 
-                    <label for="turma"></label>
-                    <input type="text" placeholder="Turma" id="turma" class="dados">
+                    <select name="Curso" id="curso" class="dados" required>
+                        <option hidden>Curso</option>
+                        <option>Informática</option>
+                        <option>Química</option>
+                        <option>Petróleo e Gás</option>
+                        <option>Edificações</option>
+                        <option>Mineração</option>
+                    </select>
 
                     <input type="submit" value="Confirmar" class="submit">
-
                 </form>
 
             </main>
 
             <footer>
-                <h1>NOSSA GREVE É PELA EDUCAÇÃO</h1>
-                <h3>Apoiadores</h3>
-                <div class="imagens">
-                    <img src="img/campus-campina-grande.png" alt="Logo IFPB - campus Campina Grande" class="logos" id="ifpb">
-                    <img src="img/sintefpb-logo.png" alt="Logo do SINTEFPB" class="logos" id="sintef">
-                    <img src="img/Logo CRT.png" alt="Logo do CRT" class="logos" id="crt">
-                    
+                <div class="apoiadores">
+                    <h3>Apoiadores</h3>
+                    <div class="imagens">
+                        <img src="img/campus-campina-grande.png" alt="Logo IFPB - campus Campina Grande" class="logos" id="ifpb">
+                        <img src="img/sintefpb-logo.png" alt="Logo do SINTEFPB" class="logos" id="sintef">
+                        <img src="img/Logo CRT.png" alt="Logo do CRT" class="logos" id="crt">
+                    </div>
                 </div>
 
-                <hr>
-
-                <h3>DESENVOLVEDORES</h3>
-                <div class="devs">
-                    <a href="https://github.com/Adilson-0">Adilson Fernandes</a>
-                    <a href="https://github.com/Arnaud-Neto">Arnaud Macêdo</a>
-                    <a href="https://github.com/Jhonnata-Virginio">Jhonnata Virginio</a>
+                <div class="desenvolvedores">
+                    <h3>DESENVOLVEDORES</h3>
+                    <div class="devs">
+                        <a href="https://github.com/Adilson-0">Adilson Fernandes</a>
+                        <a href="https://github.com/Arnaud-Neto">Arnaud Macêdo</a>
+                        <a href="https://github.com/Jhonnata-Virginio">Jhonnata Virginio</a>
+                    </div>
                 </div>
             </footer>
-
     </body>
 </html>
