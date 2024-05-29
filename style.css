@@ -68,7 +68,7 @@ main {
     text-align: center;
     display: block;
     margin: auto;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     padding: 0.5em 0 0.5em 0;
     width: 10em;
     border-radius: 20px;
@@ -90,7 +90,6 @@ main {
 
 .logos {
     display: flex;
-    margin: 0 2em;
 }
 
 #ifpb {
@@ -108,27 +107,42 @@ main {
     justify-content: space-evenly;
 }
 
-a {
+.gits {
     margin-bottom: 1em;
     font-family: var(--font-principal);
     text-decoration: underline;
     font-size: 20px;
 }
 
-a:hover {
+.gits:hover {
     color: white;
 }
 
-@media (max-width: 700px){
+@media (max-width: 795px){
+    .apoiadores{
+        display: flex;
+        justify-content: center;
+    }
     .imagens {
         display: block;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-    }
+   }
     #ifpb {
-        align-items: center;
-        width: 5em;
-        height: 9em;
+        width: 8em;
+        height: 10em;
+        margin-left: 1.5em;
+    }
+    #sintef{
+        width: 12em;
+        margin: 1em 0;
+    }
+    #crt{
+        width: 6em;
+        margin-left: 2em;
+    }
+
+    .devs{
+        display: grid;
+        justify-content: center;
+        text-align: center;
     }
 }

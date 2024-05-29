@@ -19,9 +19,9 @@
                 <h2>Confime sua Presença</h2>
                 <form method="get">
 
-                    <input type="text" placeholder="Nome" id="nome" class="dados" required>
+                    <input type="text" placeholder="Nome" id="nome" class="dados" minlength="10" required>
 
-                    <input type="text" placeholder="Matrícula" id="matricula" class="dados" maxlength="12" required>
+                    <input type="text" placeholder="Matrícula" id="matricula" class="dados" minlength="12" maxlength="12" required>
 
                     <select name="Serie" id="serie" class="dados" required>
                         <option hidden>Série</option>
@@ -42,17 +42,18 @@
                         <option>Mineração</option>
                     </select>
 
-                    <input type="submit" value="Confirmar" class="submit">
+                    <button class="submit">Confirmar</button>
                 </form>
 
             </main>
 
             <footer>
+                <h3>Apoiadores</h3>
+
                 <div class="apoiadores">
-                    <h3>Apoiadores</h3>
                     <div class="imagens">
-                        <img src="img/campus-campina-grande.png" alt="Logo IFPB - campus Campina Grande" class="logos" id="ifpb">
-                        <img src="img/sintefpb-logo.png" alt="Logo do SINTEFPB" class="logos" id="sintef">
+                        <a href="https://ifpb.edu.br/campinagrande"><img src="img/campus-campina-grande.png" alt="Logo IFPB - campus Campina Grande" class="logos" id="ifpb"></a>
+                        <a href="https://www.sintefpb.org.br/"><img src="img/sintefpb-logo.png" alt="Logo do SINTEFPB" class="logos" id="sintef"></a>
                         <img src="img/Logo CRT.png" alt="Logo do CRT" class="logos" id="crt">
                     </div>
                 </div>
@@ -60,9 +61,10 @@
                 <div class="desenvolvedores">
                     <h3>DESENVOLVEDORES</h3>
                     <div class="devs">
-                        <a href="https://github.com/Adilson-0">Adilson Fernandes</a>
-                        <a href="https://github.com/Arnaud-Neto">Arnaud Macêdo</a>
-                        <a href="https://github.com/Jhonnata-Virginio">Jhonnata Virginio</a>
+                        <a href="https://github.com/Adilson-0" class="gits">Adilson Fernandes</a>
+                        <a href="https://github.com/Arnaud-Neto" class="gits">Arnaud Macêdo</a>
+                        <a href="https://github.com/Jhonnata-Virginio" class="gits">Jhonnata Virginio</a>
+                        <a href="#" class="gits">João Gabriel</a>
                     </div>
                 </div>
             </footer>
