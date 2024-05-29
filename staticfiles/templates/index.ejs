@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Confime sua Presença</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
 
     <body>
@@ -16,22 +16,23 @@
 
             <main>
                 <h2>Confime sua Presença</h2>
-                <form id="form">
+                <form id="form" action="/process" method="POST">
 
                     <label for="nome"></label>
-                    <input type="text" placeholder="Nome" id="nome" class="dados">
+                    <input name="name" type="text" placeholder="Nome" id="nome" class="dados">
 
                     <label for="matricula"></label>
-                    <input type="text" placeholder="Matrícula" id="matricula" class="dados">
+                    <input name="subscription" type="text" placeholder="Matrícula" id="matricula" class="dados">
 
                     <label for="email"></label>
-                    <input type="text" placeholder="Email" id="email" class="dados">
+                    <input name="email" type="text" placeholder="Email" id="email" class="dados">
 
                     <label for="turma"></label>
-                    <input type="text" placeholder="Turma" id="turma" class="dados">
+                    <input name="class" type="text" placeholder="Turma" id="turma" class="dados">
 
-                    <input value="Confirmar" id="submit" class="submit">
+                   <button type="submit" class="submit" id="submit"></button>
 
+                    <input name="code" type="hidden" id="code" value="<%= code %>"></input>
                 </form>
 
             </main>
@@ -56,5 +57,5 @@
                 </div>
             </footer>
     </body>
-    <script src="app.js" defer></script>
+    <script src="../js/app.js" defer></script>
 </html>

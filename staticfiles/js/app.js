@@ -3,31 +3,40 @@ const matriculaInp = document.getElementById("matricula");
 const emailInp = document.getElementById("email");
 const turmaInp = document.getElementById("turma");
 const button = document.getElementById("submit");
+const codeInp = document.getElementById("code")
 
-button.addEventListener("click", ()=>{
-    var dados = {
+button.addEventListener("click", (e)=>{
+    e.preventDefault()
+    let dados = {
         nome:nomeInp.value,
         matricula:matriculaInp.value,
         email:emailInp.value,
-        turma:turmaInp.value
+        turma:turmaInp.value,
+        code:codeInp.value
     }
+    console.log(dados)
     alunoReq(dados);
 });
 
 async function alunoReq(dados){
-    try{
-        let req = await fetch("http://localhost:8080/addAluno", 
+
+    await fetch("http://localhost:8000/process", 
         {
             method:'POST',
             headers:{
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(dados)
-        });
-
-        let resp = await req;
+        }
+    )
+        
+    .then((resp) => {
         console.log(resp);
-    }catch (err){
-        console.log(err);
-    }
+    })
+
+    .catch((error) => {
+        console.error(error);
+    })
+
+    
 }
